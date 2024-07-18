@@ -9,7 +9,7 @@ pipeline {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-credentials-id')
     }
 
-    stages {
+    /* stages {
 
         stage('Build Backend') {
             steps {
@@ -51,12 +51,12 @@ pipeline {
         always {
             cleanWs()
         }
-    }
+    } */
      
      
 
 
-    /* stages {
+    stages {
 
         stage('Build Backend') {
             steps {
@@ -102,5 +102,5 @@ pipeline {
         always {
             cleanWs()
         }
-    } */
+    } 
 }
