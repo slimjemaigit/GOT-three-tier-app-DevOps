@@ -27,8 +27,33 @@ pipeline {
                 }
             }
         }
-        
-     }
+        stage('Push to DockerHub') {
+            steps {
+                script {
+                    docker.withRegistry('https://index.docker.io/v1/', DOCKERHUB_CREDENTIALS) {
+                        backendImage.push()
+                        frontendImage.push()
+                    }
+                }
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                script {
+                    sh 'docker-compose up -d'
+                }
+            }
+        }
+    }
+
+        post {
+        always {
+            cleanWs()
+        }
+    }
+     
+     
 
 
     /* stages {
