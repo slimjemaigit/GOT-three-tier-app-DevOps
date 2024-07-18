@@ -63,6 +63,7 @@ pipeline {
                 script {
                     dir('backend') {
                         sh 'docker build -t got-backend .'
+                        sh 'docker tag got-backend slimjemaidocker/got-backend:latest'
                     }
                 }
             }
@@ -73,6 +74,7 @@ pipeline {
                 script {
                     dir('frontend') {
                         sh 'docker build -t got-frontend .'
+                        sh 'docker tag got-frontend slimjemaidocker/got-frontend:latest'
                     }
                 }
             }
@@ -82,8 +84,8 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('https://index.docker.io/v1/', 'dockerhub-credentials-id') {
-                        sh 'docker push slimjemaidocker/got-backend'
-                        sh 'docker push slimjemaidocker/got-frontend'
+                        sh 'docker push slimjemaidocker/got-backend:latest'
+                        sh 'docker push slimjemaidocker/got-frontend:latest'
                     }
                 }
             }
