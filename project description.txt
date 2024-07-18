@@ -1,0 +1,22 @@
+Title: Movie Ranking Web Application using AWS, Docker, and Kubernetes
+
+Objective: Develop and deploy a movie ranking web application on AWS, leveraging Docker for containerization and Kubernetes for orchestration. Automate infrastructure setup and deployment processes using Terraform and implement CI/CD using Jenkins.
+
+Technologies used:
+
+Backend: Node.js or Python for server-side development.
+Database: MongoDB or PostgreSQL for storing movie data and user ratings.
+Frontend: React or Angular for building dynamic user interfaces.
+CI/CD: Jenkins for automated Continuous Integration and Continuous Delivery.
+Infrastructure as Code: Terraform for provisioning and managing AWS resources.
+Cloud Provider: AWS (Amazon Web Services) for scalable cloud infrastructure.
+Containerization: Docker for packaging the application and its dependencies into containers.
+Orchestration: Kubernetes for automating deployment, scaling, and management of containerized applications.
+Monitoring: Prometheus and Grafana for monitoring application performance, container metrics, and infrastructure health.
+Achievements:
+
+Developed a responsive and user-friendly movie ranking web application using AWS services.
+Utilized Docker for containerization to ensure consistent deployment across different environments.
+Orchestrated application deployment and scaling efficiently with Kubernetes, enhancing scalability and reliability.
+Implemented a robust CI/CD pipeline with Jenkins to automate testing, build, and deployment processes.
+Integrated Prometheus and Grafana for real-time monitoring and visualization, ensuring optimal performance and availability of the application.
