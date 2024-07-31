@@ -1,22 +1,33 @@
-Title: Movie Ranking Web Application using AWS, Docker, and Kubernetes
+Project Title:
+Game of Thrones Three-Tier Web Application
 
-Objective: Develop and deploy a movie ranking web application on AWS, leveraging Docker for containerization and Kubernetes for orchestration. Automate infrastructure setup and deployment processes using Terraform and implement CI/CD using Jenkins.
+Objective:
+To develop and deploy a scalable and interactive web application that fetches and displays Game of Thrones data using a backend API and a React frontend, ensuring a robust CI/CD pipeline for continuous integration and deployment.
 
-Technologies used:
+Technologies Used:
+Backend: Node.js, Express
+Frontend: React
+Database: MongoDB
+Containerization: Docker, Docker Compose
+CI/CD: Jenkins
+Source Control: GitHub
+Infrastructure:
+Deployment: Docker containers orchestrated using Docker Compose
+CI/CD Pipeline: Jenkins running inside a Docker container
+Version Control: GitHub for source code management
+Project Steps:
+Backend Development: Created APIs using Node.js to interact with MongoDB and fetch Game of Thrones data.
+Frontend Development: Built a React application to consume the backend APIs and display the data interactively.
+Containerization: Containerized both backend and frontend applications using Docker.
+Multi-Container Deployment: Used Docker Compose to manage and deploy the multi-container application.
+CI/CD Pipeline Setup:
+Configured Jenkins to run inside a Docker container.
+Created a Jenkins pipeline to automate the build and deployment process.
+Set up GitHub integration to trigger the pipeline on code changes.
+Achievement:
+Successfully developed, containerized, and deployed a fully functional and interactive Game of Thrones web application with an automated CI/CD pipeline, ensuring seamless integration and continuous deployment with every code change.
 
-Backend: Node.js or Python for server-side development.
-Database: MongoDB or PostgreSQL for storing movie data and user ratings.
-Frontend: React or Angular for building dynamic user interfaces.
-CI/CD: Jenkins for automated Continuous Integration and Continuous Delivery.
-Infrastructure as Code: Terraform for provisioning and managing AWS resources.
-Cloud Provider: AWS (Amazon Web Services) for scalable cloud infrastructure.
-Containerization: Docker for packaging the application and its dependencies into containers.
-Orchestration: Kubernetes for automating deployment, scaling, and management of containerized applications.
-Monitoring: Prometheus and Grafana for monitoring application performance, container metrics, and infrastructure health.
-Achievements:
 
-Developed a responsive and user-friendly movie ranking web application using AWS services.
-Utilized Docker for containerization to ensure consistent deployment across different environments.
-Orchestrated application deployment and scaling efficiently with Kubernetes, enhancing scalability and reliability.
-Implemented a robust CI/CD pipeline with Jenkins to automate testing, build, and deployment processes.
-Integrated Prometheus and Grafana for real-time monitoring and visualization, ensuring optimal performance and availability of the application.
+
+
+

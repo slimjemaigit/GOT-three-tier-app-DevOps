@@ -9,7 +9,7 @@ dotenv.config();
 const app: Application = express();
 const port: number = 3000;
 
-const url: string = process.env.MONGO_URL as string;
+const url: string = "mongodb+srv://slim:VN5mph40sakfHNvM@cluster0.pgieeki.mongodb.net/GOT-app?retryWrites=true&w=majority&appName=Cluster0";
 const dbName: string = 'GOT-app';
 
 let db: Db;

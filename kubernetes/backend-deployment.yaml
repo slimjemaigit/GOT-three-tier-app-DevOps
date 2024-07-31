@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: got-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: got-backend
+  template:
+    metadata:
+      labels:
+        app: got-backend
+    spec:
+      containers:
+      - name: got-backend
+        image: slimjemaidocker/got-backend:latest
+        ports:
+        - containerPort: 3000
+        env:
+        - name: MONGO_URI
+          value: "MONGO_URL=mongodb+srv://slim:VN5mph40sakfHNvM@cluster0.pgieeki.mongodb.net/GOT-app?retryWrites=true&w=majority&appName=Cluster0"
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+spec:
+  selector:
+    app: got-backend
+  ports:
+  - protocol: TCP
+    port: 3000
+    targetPort: 3000
+  type: ClusterIP
+
